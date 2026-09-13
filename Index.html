@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIYA TECHS | Cloud Solutions, Enterprise Software & IT Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy-900: #0f172a;
+      --navy-800: #1e293b;
+      --slate-500: #64748b;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { color: var(--navy-800); background-color: var(--slate-50); line-height: 1.6; }
+    
+    /* Navigation */
+    nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
+    .logo { font-size: 1.4rem; font-weight: 800; color: var(--navy-900); letter-spacing: 0.5px; }
+    .logo span { color: var(--primary); }
+    .nav-links a { margin-left: 20px; text-decoration: none; color: var(--navy-800); font-weight: 600; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-phone { background: var(--slate-100); padding: 8px 14px; border-radius: 6px; color: var(--navy-900) !important; }
+
+    /* Hero Section */
+    .hero { background: radial-gradient(circle at top right, #1e293b, #0f172a); color: var(--white); padding: 75px 20px; text-align: center; }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .badge { display: inline-block; background: rgba(2, 132, 199, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.7rem; font-weight: 800; line-height: 1.25; margin-bottom: 20px; letter-spacing: -0.5px; }
+    .hero h1 span { color: #38bdf8; }
+    .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 700px; margin: 0 auto 30px; }
+    .hero-actions { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .btn { display: inline-block; background: var(--primary); color: var(--white); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; }
+    .btn:hover { background: var(--primary-dark); }
+    .btn-outline { background: transparent; border: 1px solid #38bdf8; color: #38bdf8; }
+    .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
+
+    /* Competencies Banner */
+    .partners { background: var(--white); border-bottom: 1px solid var(--border); padding: 22px 20px; text-align: center; }
+    .partners p { font-size: 0.82rem; color: var(--slate-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 10px; }
+    .partner-tags { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+    .partner-tags span { color: var(--navy-800); font-weight: 700; font-size: 1rem; }
+
+    /* Services Section */
+    .section { max-width: 1140px; margin: 55px auto; padding: 0 20px; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 2rem; font-weight: 800; color: var(--navy-900); }
+    .section-title p { color: var(--slate-500); font-size: 1rem; margin-top: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 28px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+    .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--navy-900); }
+    .card p { color: var(--slate-500); font-size: 0.95rem; line-height: 1.6; }
+    .card ul { margin-top: 14px; list-style-position: inside; color: var(--navy-800); font-size: 0.9rem; }
+    .card ul li { margin-bottom: 6px; }
+
+    /* Corporate & Legal Compliance Box */
+    .compliance-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 30px; margin-top: 45px; }
+    .compliance-box h3 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; }
+    .info-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
+    .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2fe; vertical-align: top; }
+    .info-table td:first-child { font-weight: 700; color: var(--navy-900); width: 230px; }
+    .info-table a { color: var(--primary); text-decoration: none; }
+
+    /* Footer */
+    footer { background: var(--navy-900); color: #94a3b8; padding: 40px 20px 30px; font-size: 0.9rem; text-align: center; border-top: 1px solid var(--navy-800); }
+    footer a { color: #38bdf8; text-decoration: none; margin: 0 10px; cursor: pointer; }
+    footer a:hover { text-decoration: underline; }
+    footer p { margin-bottom: 8px; }
+
+    /* Policy Modal Styles */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
+    .modal-box { background: var(--white); border-radius: 10px; max-width: 600px; width: 100%; padding: 30px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); position: relative; }
+    .modal-box h3 { color: var(--navy-900); margin-bottom: 15px; font-size: 1.3rem; font-weight: 700; }
+    .modal-box p { color: var(--navy-800); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+    .modal-close { display: inline-block; background: var(--primary); color: var(--white); padding: 8px 18px; border-radius: 5px; border: none; font-weight: 600; cursor: pointer; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">SIYA <span>TECHS</span></div>
+      <div class="nav-links">
+        <a href="#services">Solutions</a>
+        <a href="#compliance">Entity Profile</a>
+        <a href="#compliance">Contact</a>
+        <a href="tel:+919063902001" class="nav-phone">+91 9063902001</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge">Commercial IT Solutions & Enterprise Cloud Reseller</div>
+      <h1>Empower Your Business With <span>Microsoft 365 & IT Cloud Systems</span></h1>
+      <p>Authorized corporate IT reseller providing commercial software licensing, cloud tenant provisioning, enterprise hardware, and office infrastructure support.</p>
+      <div class="hero-actions">
+        <a href="#compliance" class="btn">View Corporate Profile</a>
+        <a href="tel:+919063902001" class="btn btn-outline">Call: +91 9063902001</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="partners">
+    <p>Enterprise Products & Cloud Competencies</p>
+    <div class="partner-tags">
+      <span>Microsoft 365 Business</span>
+      <span>•</span>
+      <span>Exchange Online</span>
+      <span>•</span>
+      <span>Enterprise PC Hardware</span>
+      <span>•</span>
+      <span>Commercial Networking</span>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="section-title">
+      <h2>Enterprise Solutions & Capabilities</h2>
+      <p>Delivering end-to-end cloud licensing and hardware infrastructure for business clients.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Microsoft Cloud & Productivity</h3>
+        <p>Direct supply and management of official Microsoft 365 commercial subscriptions.</p>
+        <ul>
+          <li>Microsoft 365 Apps for Business & Standard</li>
+          <li>Corporate Email & Exchange Online Setup</li>
+          <li>Cloud Security Defaults & User Administration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Hardware Procurement & Supply</h3>
+        <p>Sourcing commercial-grade IT hardware, workstation components, and storage systems.</p>
+        <ul>
+          <li>Custom Workstation & Office PC Builds</li>
+          <li>OEM Solid State Storage & High-Speed Memory</li>
+          <li>Enterprise Peripherals & Network Infrastructure</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Managed IT Services & Support</h3>
+        <p>Dedicated technical assistance and administrative support for operational continuity.</p>
+        <ul>
+          <li>DNS, Domain & Mailbox Routing Configuration</li>
+          <li>Tenant User Onboarding & Software Deployment</li>
+          <li>Annual Maintenance & Preventative IT Support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="compliance-box" id="compliance">
+      <h3>Registered Entity & Commercial Profile</h3>
+      <p>SIYA TECHS is a registered enterprise IT consultancy and commercial reseller based in Visakhapatnam, Andhra Pradesh.</p>
+      <table class="info-table">
+        <tr>
+          <td>Legal Name</td>
+          <td>PATI ROSLI (Trading as SIYA TECHS)</td>
+        </tr>
+        <tr>
+          <td>Constitution of Business</td>
+          <td>Proprietorship</td>
+        </tr>
+        <tr>
+          <td>GSTIN</td>
+          <td>37FOTPR7111R1ZR (Regular Taxpayer)</td>
+        </tr>
+        <tr>
+          <td>Principal Place of Business</td>
+          <td>Floor No: 1, Door No: 39-26-66/1, Near Punjab Hotel, Rajeev Nagar, Marripalem, Visakhapatnam, Andhra Pradesh - 530018</td>
+        </tr>
+        <tr>
+          <td>Official Correspondence</td>
+          <td><a href="mailto:contact@siyatechs.com">contact@siyatechs.com</a></td>
+        </tr>
+        <tr>
+          <td>Contact Number</td>
+          <td><a href="tel:+919063902001">+91 9063902001</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2026 SIYA TECHS. All Rights Reserved. Commercial IT Solutions & Software Reselling.</p>
+    <p>Visakhapatnam, Andhra Pradesh, India</p>
+    <p style="margin-top: 12px; font-size: 0.85rem;">
+      <a onclick="openModal('terms')">Terms of Service</a> | 
+      <a onclick="openModal('privacy')">Privacy Policy</a> | 
+      <a onclick="openModal('gst')">GST Compliance</a>
+    </p>
+  </footer>
+
+  <!-- Reusable Policy Modal -->
+  <div class="modal-overlay" id="policyModal" onclick="closeModal(event)">
+    <div class="modal-box">
+      <h3 id="modalTitle">Policy</h3>
+      <p id="modalBody">Details...</p>
+      <button class="modal-close" onclick="closeModalDirect()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const content = {
+      terms: {
+        title: "Terms of Service",
+        body: "SIYA TECHS provides enterprise B2B software licensing, cloud tenant configuration, and hardware procurement services. Software licenses are provisioned under official vendor terms (including the Microsoft Cloud Solution Provider Agreement). Commercial orders are subject to confirmed purchase orders, upfront milestone clearing, and standard enterprise warranties."
+      },
+      privacy: {
+        title: "Privacy & Data Policy",
+        body: "We respect enterprise client confidentiality. Business entity details, contact identities, and tenant domain credentials gathered during provisioning are used strictly for service fulfillment, official vendor licensing registration, and compliant GST billing. SIYA TECHS does not sell or share business information with outside commercial brokers."
+      },
+      gst: {
+        title: "GST Compliance & Tax Billing",
+        body: "SIYA TECHS is a verified regular GST taxpayer under registration number 37FOTPR7111R1ZR, operating in Visakhapatnam, Andhra Pradesh. Every commercial sale is billed via compliant B2B GST tax invoices, enabling registered business customers to claim eligible 18% Input Tax Credit (ITC) without delay."
+      }
+    };
+
+    function openModal(type) {
+      document.getElementById('modalTitle').innerText = content[type].title;
+      document.getElementById('modalBody').innerText = content[type].body;
+      document.getElementById('policyModal').style.display = 'flex';
+    }
+
+    function closeModalDirect() {
+      document.getElementById('policyModal').style.display = 'none';
+    }
+
+    function closeModal(e) {
+      if (e.target.id === 'policyModal') {
+        document.getElementById('policyModal').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
